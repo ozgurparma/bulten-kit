@@ -1,0 +1,116 @@
+{
+ "tarih": "9 Ekim 2026",
+ "baslik": "Kurumsal İletişim Araçlarının Denetimi: KVK Kurulu İlke Kararı",
+ "alt_baslik": "İşverenin denetim yetkisi kademeli, ölçülü ve önceden bildirilmiş olmak zorunda",
+ "bloklar": [
+  {
+   "paragraflar": [
+    "Kişisel Verileri Koruma Kurulu'nun 16.09.2026 tarihli ve 2026/2035 sayılı İlke Kararı, 08.10.2026 tarihli Resmî Gazete'de yayımlanmıştır. 6698 sayılı Kanun'un 15/6. maddesine dayanan karar, işverenin çalışan iletişimini denetlemesine ilişkin 16 bentlik değerlendirme içermekte; bunlara uyulmaması hâlinde Kanun'un 18. maddesi uyarınca idari para cezası uygulanacağını bildirmektedir.",
+    "Kararın çıkış noktası, iletişim aracının işverene ait olmasının veya işyerinde kullanılmasının sınırsız bir denetim yetkisi vermediğidir. Kurumsal e-postanın yanı sıra kurum içi mesajlaşma uygulamaları, müşteri ilişkileri ve talep yönetim sistemleri ile toplantı platformlarındaki sohbet ve kayıt alanları da somut olaya göre kapsamdadır."
+   ]
+  },
+  {
+   "baslik": "Denetimin Kademeleri",
+   "tablo": {
+    "sutunlar": [
+     "DENETİM TÜRÜ",
+     "KARARDAKİ ÖLÇÜT"
+    ],
+    "satirlar": [
+     [
+      "Trafik ve kayıt (log) incelemesi",
+      "İçeriğe erişilmese dahi kendi başına kişisel veri işleme sayılır; genel ilkelere, işleme şartlarına, aydınlatma ve veri güvenliği yükümlülüklerine tabidir (Kanun m. 4, 5, 6, 10, 12)."
+     ],
+     [
+      "İçerik incelemesi",
+      "Ancak trafik verisi incelemesi yetersiz kaldığında ve içeriğe erişim zorunlu hâle geldiğinde, somut bir şüphenin varlığı hâlinde ve iddia ile sınırlı olarak yapılabilir. Belirsiz kapsamlı, genel ve sürekli içerik taraması kabul görmez."
+     ],
+     [
+      "Özel yazışmalar",
+      "Özel kullanıma izin verilmiş ve iş yazışmaları ayrıştırılabiliyorsa denetim iş iletişimiyle sınırlıdır; ayrıştırılamıyorsa denetim yetkisi daha dar yorumlanır."
+     ],
+     [
+      "Kişisel hesaplar",
+      "Cihaz, oturum, ağ veya sistem üzerindeki teknik yetki, çalışanın kişisel e-posta, anlık mesajlaşma ve sosyal medya yazışmalarına erişim hakkı vermez."
+     ],
+     [
+      "Gizli ve ayrımsız izleme",
+      "Önceden bildirilmeyen izleme ile tüm işlemleri ayrım gözetmeksizin kaydeden araçlar hukuka aykırıdır; sürekli ve kesintisiz gözetim ölçülü sayılmaz."
+     ],
+     [
+      "Ayrılan çalışanın hesabı",
+      "Kural olarak kullanıma ve yeni erişime kapatılır, gelen iletiler ilgisiz kişilerce görülemez, dayanağı kalmayan veriler imha edilir. İş sürekliliği, savunma hakkı veya mevzuat yükümlülüğü için yönlendirme, otomatik yanıt ve arşivleme; sınırlı süreli, yetkilileri belirli ve kayıtlı olarak yapılabilir."
+     ]
+    ]
+   }
+  },
+  {
+   "baslik": "Veri Sorumlusunun Yükümlülükleri",
+   "maddeler": [
+    {
+     "vurgu": "Somut aydınlatma",
+     "metin": "Aydınlatma metni; hukuki sebebi, amacı ve kapsamı, denetimin trafik incelemesiyle mi içerik incelemesiyle mi yapılacağını, içeriğe hangi koşullarda erişileceğini, saklama süresini ve Kanun'un 11. maddesindeki hakları açıkça göstermelidir. Hesabın denetlenebileceğini bildiren genel ifadeler aydınlatma sayılmaz; bu durumda çalışanın makul mahremiyet beklentisi esas alınır."
+    },
+    {
+     "vurgu": "Açık rızanın sınırlı yeri",
+     "metin": "İş ilişkisindeki bağımlılık nedeniyle açık rıza kural olarak öncelikli dayanak yapılmamalı; dayanılırsa rızanın özgür iradeye dayanıp dayanmadığı ayrıca incelenir. Somut olaya göre hukuki yükümlülük, bir hakkın tesisi, kullanılması veya korunması ve meşru menfaat şartlarına (m. 5/2-ç, e, f) dayanılabilir; bu şartlar da sınırsız denetime imkân vermez."
+    },
+    {
+     "vurgu": "Kademelilik ve ölçülülük",
+     "metin": "Amaca daha hafif bir yöntemle ulaşılabiliyorsa ağır yönteme başvurulamaz. Kötüye kullanım filtreleme veya engelleme gibi teknik önlemlerle önlenebiliyorsa genel denetim yetkisi doğmaz; özel kullanım yasağının ihlali içerik dışı verilerden anlaşılabiliyorsa içeriğe erişim orantılı sayılmaz. İçerik denetiminde özel nitelikli veriler ile üçüncü kişi verileri ayrıca gözetilir."
+    },
+    {
+     "vurgu": "Erişim ve saklama",
+     "metin": "Verilere erişim, görev tanımıyla belirlenmiş sınırlı sayıda personele bırakılır; erişim kayıtları tutulur ve erişen kişiler gizlilik yükümlülüğü altına alınır. Veriler, işleme amacının gerektirdiği süre kadar saklanır."
+    }
+   ]
+  },
+  {
+   "baslik": "İş Uyuşmazlıklarına Yansıması",
+   "maddeler": [
+    {
+     "vurgu": "Delil değeri",
+     "metin": "Kararın ölçütlerine aykırı bir denetimle elde edilen yazışmalar, fesih ve işçilik alacağı davalarında hukuka aykırı delil itirazıyla karşılaşabilir. Delilin hukuka aykırı elde edildiğinin kabulü hâlinde, Hukuk Muhakemeleri Kanunu'nun 189. maddesinin ikinci fıkrası uyarınca bu yazışmalar ispat aracı olarak değerlendirilemez."
+    },
+    {
+     "vurgu": "Avrupa standardıyla uyum",
+     "metin": "Önceden bilgilendirme, meşru amaç ve daha hafif yöntemlerin önceliği ölçütleri, AİHM Büyük Dairesi'nin Bărbulescu/Romanya kararıyla (B. No. 61496/08, 05.09.2017) örtüşmektedir."
+    }
+   ]
+  },
+  {
+   "baslik": "Atılması Önerilen Adımlar",
+   "paragraflar": [
+    "Kararda geçiş süresi öngörülmemiştir."
+   ],
+   "tablo": {
+    "sutunlar": [
+     "KONU",
+     "YAPILMASI GEREKEN"
+    ],
+    "satirlar": [
+     [
+      "Aydınlatma metinleri",
+      "Kararın 6. bendinde sayılan unsurları içerecek şekilde güncellenmelidir."
+     ],
+     [
+      "Yazılı politika",
+      "İş ve özel kullanım ayrımı, denetimin kademeleri ve içeriğe erişim koşulları yazılı bir politikayla çalışanlara duyurulmalıdır."
+     ],
+     [
+      "Hukuki sebep",
+      "Açık rızaya dayanan denetim hükümleri, koşulları somut olayda gerçekten oluşuyorsa hukuki yükümlülük, hakkın korunması veya meşru menfaat dayanağına çevrilmeli; meşru menfaat dengesi yazılı olarak belgelenmelidir."
+     ],
+     [
+      "İşten ayrılma süreci",
+      "Hesabın kapatılması, yönlendirme süresi, erişim yetkilileri ve imha adımları prosedürde tanımlanmalıdır."
+     ],
+     [
+      "Kapsam",
+      "Mesajlaşma, müşteri ilişkileri ve toplantı platformları da politikaya dahil edilmeli; erişim yetki matrisi ve erişim kayıtları oluşturulmalıdır."
+     ]
+    ]
+   }
+  }
+ ]
+}

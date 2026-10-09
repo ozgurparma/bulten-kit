@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>{{ baslik }}</title>
+<style>
+@font-face{font-family:"Fraunces";src:url("fonts/Fraunces-SemiBold.ttf");font-weight:600}
+@font-face{font-family:"Fraunces";src:url("fonts/Fraunces-Regular.ttf");font-weight:400}
+@font-face{font-family:"Garamond";src:url("fonts/EBGaramond-Regular.ttf");font-weight:400}
+@font-face{font-family:"Garamond";src:url("fonts/EBGaramond-SemiBold.ttf");font-weight:600}
+@font-face{font-family:"Garamond";src:url("fonts/EBGaramond-Italic.ttf");font-style:italic}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Medium.ttf");font-weight:500}
+@font-face{font-family:"Inter";src:url("fonts/Inter-SemiBold.ttf");font-weight:600}
+@page{
+  size:A4; margin:11mm 14mm 15mm 14mm; background:#FBF9F4;
+  @bottom-center{content:element(kapanis);vertical-align:top;width:100%}
+}
+@page :first{margin-top:0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Garamond;font-size:9.2pt;line-height:1.22;color:#2A2F34;font-kerning:normal}
+.bant{background:#17232F;margin:0 -14mm;padding:5.5mm 14mm 4.5mm;display:flex;justify-content:space-between;align-items:center;border-bottom:2pt solid #C9A66B}
+.bant img{height:13mm}
+.etiket{text-align:right;font:600 7.4pt Inter;letter-spacing:.16em;color:#C9A66B}
+.etiket span{display:block;font-weight:500;letter-spacing:.04em;color:#B9C2B6;margin-top:1.2mm}
+h1{font:600 14.5pt/1.2 Fraunces;color:#1E2226;margin:3.6mm 0 .6mm}
+.altbaslik{font:italic 10.5pt Garamond;color:#4A6450;margin:0 0 1.8mm}
+p{margin:0 0 1.5mm;text-align:justify;hyphens:auto}
+h2{font:600 9.6pt Fraunces;color:#1E2226;margin:2.6mm 0 1.2mm;padding-left:2.6mm;border-left:2.2pt solid #C9A66B}
+table{width:100%;border-collapse:collapse;page-break-inside:avoid;margin-bottom:1mm}
+th{background:#17232F;color:#F3EFE4;font:600 7pt Inter;letter-spacing:.08em;text-align:left;padding:1.2mm 2.2mm}
+td{padding:.9mm 2.2mm;border-bottom:.6pt solid #D9D3C4;vertical-align:top;font-size:8.9pt;line-height:1.18}
+td:first-child{width:21%;font-weight:600;color:#1E2226;background:#F3EFE4}
+td:last-child{text-align:justify}
+.madde{display:flex;gap:2.6mm;margin:0 0 1.1mm;text-align:justify;page-break-inside:avoid}
+.madde i{flex:none;width:1.7mm;height:1.7mm;margin-top:1.6mm;background:#C9A66B;transform:rotate(45deg)}
+.madde b{color:#1E2226;font-weight:600}
+.kapanis{position:running(kapanis);padding-top:2mm;border-top:.6pt solid #D9D3C4;font:500 6.6pt/1.4 Inter;color:#6B7268;display:flex;justify-content:space-between;gap:6mm}
+.kapanis .yazar{color:#1E2226;font-weight:600}
+.kapanis .sayfa::after{content:"{{ site }}  ·  " counter(page) "/" counter(pages);color:#A8844A;font-weight:600}
+</style>
+</head>
+<body>
+<div class="kapanis">
+  <div><span class="yazar">{{ yazar }}</span> · {{ eposta }}<br><span class="sayfa"></span></div>
+  <div style="text-align:right;max-width:58%">{{ sorumluluk }}</div>
+</div>
+
+<div class="bant">
+  <img src="logo.svg" alt="Parmaksız Hukuk">
+  <div class="etiket">{{ etiket }}<span>{{ tarih }}</span></div>
+</div>
+
+<h1>{{ baslik }}</h1>
+{% if alt_baslik %}<p class="altbaslik">{{ alt_baslik }}</p>{% endif %}
+
+{% for blok in bloklar %}
+  {% if blok.baslik %}<h2>{{ blok.baslik }}</h2>{% endif %}
+  {% for p in blok.paragraflar or [] %}<p>{{ p }}</p>{% endfor %}
+  {% if blok.tablo %}
+  <table>
+    <tr>{% for s in blok.tablo.sutunlar %}<th>{{ s }}</th>{% endfor %}</tr>
+    {% for r in blok.tablo.satirlar %}<tr>{% for c in r %}<td>{{ c }}</td>{% endfor %}</tr>{% endfor %}
+  </table>
+  {% endif %}
+  {% for m in blok.maddeler or [] %}<div class="madde"><i></i><div>{% if m.vurgu %}<b>{{ m.vurgu }}.</b> {% endif %}{{ m.metin }}</div></div>{% endfor %}
+{% endfor %}
+</body>
+</html>

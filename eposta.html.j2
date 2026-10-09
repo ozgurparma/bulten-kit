@@ -1,0 +1,50 @@
+{%- set serif = "Georgia,serif" -%}
+{%- set head = "Georgia,serif" -%}
+{%- set sans = "Arial,sans-serif" -%}
+<div style="margin:0;padding:0;">
+<table bgcolor="#EDE9DF" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#EDE9DF;"><tr><td align="center" style="padding:16px 8px;">
+<table bgcolor="#FBF9F4" width="640" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:640px;background-color:#FBF9F4;">
+
+<tr><td bgcolor="#17232F" style="background-color:#17232F;padding:20px 26px 16px;border-bottom:3px solid #C9A66B;">
+ <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+  <td valign="middle"><img src="https://ozgurparmaksiz.av.tr/assets/img/bulten-logo.png" width="176" height="52" alt="Parmaksız Hukuk" style="display:block;border:0;width:176px;height:52px;"></td>
+  <td valign="middle" align="right" style="font-family:{{ sans }};font-size:10px;font-weight:600;letter-spacing:2px;color:#C9A66B;">{{ etiket }}<br><span style="font-weight:500;letter-spacing:.5px;color:#B9C2B6;">{{ tarih }}</span></td>
+ </tr></table>
+</td></tr>
+
+<tr><td style="padding:22px 26px 6px;">
+ <h1 style="margin:0 0 4px;font-family:{{ head }};font-size:22px;line-height:1.25;font-weight:600;color:#1E2226;">{{ baslik }}</h1>
+ {% if alt_baslik %}<p style="margin:0 0 12px;font-family:{{ serif }};font-style:italic;font-size:16px;line-height:1.35;color:#4A6450;">{{ alt_baslik }}</p>{% endif %}
+
+ {% for blok in bloklar %}
+  {% if blok.baslik %}<h2 style="margin:18px 0 8px;padding-left:9px;border-left:3px solid #C9A66B;font-family:{{ head }};font-size:16px;line-height:1.3;font-weight:600;color:#1E2226;">{{ blok.baslik }}</h2>{% endif %}
+  {% for p in blok.paragraflar or [] %}<p style="margin:0 0 10px;font-family:{{ serif }};font-size:16px;line-height:1.45;color:#2A2F34;">{{ p }}</p>{% endfor %}
+  {% if blok.tablo %}
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin:0 0 6px;">
+   <tr>{% for s in blok.tablo.sutunlar %}<td bgcolor="#17232F" style="background-color:#17232F;color:#F3EFE4;font-family:{{ sans }};font-size:10px;font-weight:600;letter-spacing:1px;padding:7px 9px;">{{ s }}</td>{% endfor %}</tr>
+   {% for r in blok.tablo.satirlar %}<tr>
+    <td bgcolor="#F3EFE4" valign="top" width="30%" style="background-color:#F3EFE4;border-bottom:1px solid #D9D3C4;padding:7px 9px;font-family:{{ serif }};font-size:15px;line-height:1.3;font-weight:600;color:#1E2226;">{{ r[0] }}</td>
+    {% for c in r[1:] %}<td valign="top" style="border-bottom:1px solid #D9D3C4;padding:7px 9px;font-family:{{ serif }};font-size:15px;line-height:1.38;color:#2A2F34;">{{ c }}</td>{% endfor %}
+   </tr>{% endfor %}
+  </table>
+  {% endif %}
+  {% for m in blok.maddeler or [] %}
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 8px;"><tr>
+   <td valign="top" width="16" style="font-family:{{ sans }};font-size:12px;line-height:22px;color:#C9A66B;">&#9670;</td>
+   <td valign="top" style="font-family:{{ serif }};font-size:16px;line-height:1.45;color:#2A2F34;">{% if m.vurgu %}<b style="color:#1E2226;">{{ m.vurgu }}.</b> {% endif %}{{ m.metin }}</td>
+  </tr></table>
+  {% endfor %}
+ {% endfor %}
+</td></tr>
+
+<tr><td style="padding:14px 26px 22px;">
+ <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #D9D3C4;"><tr>
+  <td style="padding-top:10px;font-family:{{ sans }};font-size:11px;line-height:1.5;color:#6B7268;">
+   {{ sorumluluk }}
+  </td></tr></table>
+</td></tr>
+
+</table>
+</td></tr></table>
+
+</div>
